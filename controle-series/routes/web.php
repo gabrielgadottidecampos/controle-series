@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/series', [SeriesController::class, 'index']);
+Route::get('/series/adicionar',[SeriesController::class, 'create']);

@@ -9,11 +9,12 @@ class SeriesController extends Controller
     public function index()
     {
         $series =['Grey\`s Anatomy','Lost','Agents of Shield'];
-        $html = "<ul>";
-        foreach ($series as $serie) {
-            $html .= "<li>$serie</li>";
-        }
-        $html .= "</ul>";
-        return $html;
+
+        return view('series.index', compact('series'));
+    }
+
+    public function create()
+    {
+        return view('series.create');
     }
 }
